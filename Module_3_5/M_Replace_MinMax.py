@@ -12,3 +12,4 @@ for i in range(n):
         print(arr[i], end=" ")
         continue
     print(arr[i], end=" ")
+# https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/M

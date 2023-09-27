@@ -16,3 +16,4 @@ while q != 0:
         res = pre[r] - pre[l - 1]
     print(res)
     q -= 1
+# https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Y
