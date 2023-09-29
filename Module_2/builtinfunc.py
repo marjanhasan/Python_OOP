@@ -76,3 +76,67 @@ x = pow(2, 3)
 # 0 to 9 (10 is not included)
 # for n in range(0, 10, 2):
 #     print(n)
+
+# 13)
+# reversed (returns a reverse iterator object)
+numbers = [1, 2, 3, 4, 5]
+rev_num = reversed(numbers)
+# print(list(rev_num)) [5, 4, 3, 2, 1]
+
+# 14)
+# round (return a round number)
+x = round(5.76543, 2)
+# print(x) 5.77
+x = round(5.76543)
+# print(x) 6
+
+# 15)
+# set (returns a set object)
+x = set(("apple", "banana", "cherry"))  # {'banana', 'apple', 'cherry'}
+# print(x)
+
+# 16)
+# slice (returns a slice object)
+a = ["a", "b", "c", "d", "e", "f", "g", "h"]
+x = slice(2)  # ['a', 'b']
+x = slice(3, 5)  # ["d", "e"]
+x = slice(0, 8, 3)  # ['a', 'd', 'g']
+# print(a[x])
+
+# 17)
+# sorted (returns a sorted list)
+numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+sorted_numbers = sorted(numbers)  # [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+sort_des = sorted(numbers, reverse=True)  # [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1]
+tuple_values = (7, 2, 5, 1, 8)
+sorted_tuple = sorted(tuple_values)  # [1, 2, 5, 7, 8]
+word = "Python"
+sorted_word = sorted(word)
+# print("".join(sorted_word)) Phnoty
+words = ["apple", "banana", "cherry", "date"]
+sorted_words_by_length = sorted(words, key=len)  # ['date', 'apple', 'banana', 'cherry']
+pairs = [(1, 5), (3, 2), (2, 8), (4, 7)]
+sorted_pairs = sorted(pairs, key=lambda x: x[1])  # [(3, 2), (1, 5), (4, 7), (2, 8)]
+
+# 18)
+# sum (returns sum)
+a = (1, 2, 3, 4, 5)
+x = sum(a)  # 15
+x = sum(a, 7)  # 22
+# print(x)
+
+# 19)
+# tuple (returns a tuple)
+x = tuple(("apple", "banana", "cherry"))  # ('apple', 'banana', 'cherry')
+# print(x)
+
+# 20)
+# type (returns type)
+a = ("apple", "banana", "cherry")
+b = "Hello World"
+c = 33
+
+x = type(a)  # <class 'tuple'>
+y = type(b)  # <class 'str'>
+z = type(c)  # <class 'int'>
+# print(x, y, z)
