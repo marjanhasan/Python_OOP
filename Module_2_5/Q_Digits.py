@@ -1,5 +1,5 @@
 # taking input as a string
-
+# https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Q
 t = input()
 ti = int(t)
 while ti != 0:

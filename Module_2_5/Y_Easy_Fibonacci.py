@@ -10,3 +10,4 @@ else:
         fib.append(fib[i - 1] + fib[i - 2])
     for n in fib:
         print(n, end=" ")
+# https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Y

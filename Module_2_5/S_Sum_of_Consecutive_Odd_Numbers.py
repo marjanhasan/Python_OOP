@@ -11,3 +11,4 @@ while t != 0:
             sum += i
     print(sum)
     t -= 1
+# https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S
