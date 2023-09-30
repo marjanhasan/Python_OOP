@@ -1,5 +1,5 @@
 class Shop:
-    cart = []
+    cart = []  # class attribute
 
     def __init__(self, buyer):
         self.buyer = buyer

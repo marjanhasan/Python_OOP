@@ -3,7 +3,7 @@ class Shop:
 
     def __init__(self, buyer):
         self.buyer = buyer
-        self.cart = []
+        self.cart = []  # instance attribute
 
     def add_to_cart(self, item):
         self.cart.append(item)
