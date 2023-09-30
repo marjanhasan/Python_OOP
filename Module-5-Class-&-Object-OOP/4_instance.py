@@ -1,5 +1,5 @@
 class Shop:
-    mall: "Jamuna"
+    mall = "Jamuna"
 
     def __init__(self, buyer):
         self.buyer = buyer
