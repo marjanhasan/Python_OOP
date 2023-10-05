@@ -8,9 +8,9 @@ class User:
         self.__money = money
 
     # getter without setter
-    @property
+    @property  # method re attibute banay felte use hoy
     def age(self):
-        return self._age
+        return self._age  # access krte obj.age dilei hbe
 
     # getter with setter
     @property

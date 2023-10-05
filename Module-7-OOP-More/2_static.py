@@ -16,7 +16,7 @@ class Shopping:
         print(res)
 
     @classmethod
-    def hudai(self, item):
+    def hudai(self, item):  # can be access without obj.hudai()
         print("hudai dekhbar aisi", item)
 
 
