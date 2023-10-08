@@ -1,16 +1,17 @@
 class Restaurant:
-    def __init__(self, name, menu=[]) -> None:
+    def __init__(self, name, rent, menu=[]) -> None:
         self.name = name
         self.chef = None
         self.server = None
         self.manager = None
+        self.rent = rent
         self.menu = menu
         self.revenue = 0
         self.expense = 0
         self.balance = 0
         self.profit = 0
 
-    def add_employee(self, employee, employee_type):
+    def add_employee(self, employee_type, employee):
         if employee_type == "chef":
             self.chef = employee
 
@@ -37,3 +38,10 @@ class Restaurant:
     def pay_salary(self, employee):
         if employee.salary < self.balance:
             employee.receive_salary()
+
+    def show_employees(self):
+        print("Showing employees")
+        if self.chef is not None:
+            print(f"Chef: {self.chef.name} with salary: {self.chef.salary}")
+        if self.server is not None:
+            print(f"server: {self.server.name} with salary: {self.server.salary}")
