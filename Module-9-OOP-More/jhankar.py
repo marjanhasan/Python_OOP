@@ -55,7 +55,7 @@ class Rider(User):
             ride_request = Ride_Request(self, destination)
             ride_matcher = Ride_Matching(ride_sharing.drivers)
             ride = ride_matcher.find_driver(ride_request)
-            print("got the ride,yay", ride)
+            print("got the ride, yay", ride)
             self.current_ride = ride
 
     def show_current_ride(self):
@@ -97,7 +97,7 @@ class Ride:
         self.driver.wallet += self.estimated_fare
 
     def __repr__(self) -> str:
-        return f"Ride details. Started: {self.current_location} to {self.end_location}"
+        return f"Ride details. Started: {self.start_location} to {self.end_location}"
 
 
 class Ride_Request:
@@ -112,7 +112,7 @@ class Ride_Matching:
 
     def find_driver(self, ride_request):
         if len(self.available_drivers) > 0:
-            # TODO: find the closest driver of the rider
+            # TODO: find  the closest driver of the rider
             print("looking for a driver")
             driver = self.available_drivers[0]
             ride = Ride(ride_request.rider.current_location, ride_request.end_location)
@@ -128,7 +128,6 @@ class Vehicle(ABC):
         self.license_plate = license_plate
         self.rate = rate
         self.status = "available"
-        super().__init__()
 
     @abstractmethod
     def start_drive(self):
@@ -154,13 +153,10 @@ class Bike(Vehicle):
 # check the class integration
 
 niye_jao = Ride_Sharing("Niye Jao")
-sakib = Rider("Sakib Khan", "sakib@khan.com", 1254, "mohakhali", 1200)
+sakib = Rider("sakib Khan", "sakib@khan.com", 1254, "mohakhali", 1200)
 niye_jao.add_rider(sakib)
 kala_pakhi = Driver("Kala Pakhi", "kala@sada.com", 5648, "gulshan 1")
 niye_jao.add_driver(kala_pakhi)
 print(niye_jao)
 sakib.request_ride(niye_jao, "uttara")
 sakib.show_current_ride()
-""" 
-
-"""
