@@ -1,6 +1,7 @@
 from menu import Pizza, Burger, Drinks, Menu
 from Restaurant import Restaurant
 from users import Chef, Customer, Server, Manager
+from order import Order
 
 
 def main():
@@ -22,7 +23,7 @@ def main():
     coffee = Drinks("Mocha Coffee", 300, False)
     menu.add_menu_item("drinks", coffee)
 
-    menu.show_menu()
+    # menu.show_menu()
 
     restaurant = Restaurant("Sai Baba restaurant", 2000, menu)
 
@@ -48,7 +49,34 @@ def main():
     )
     restaurant.add_employee("server", server)
 
-    restaurant.show_employees()
+    # restaurant.show_employees()
+
+    customer_1 = Customer("Sakib Khan", 6, "king@khan.com", "banani", 100000)
+    order_1 = Order(customer_1, [pizza_3, coffee, coke, burger_1, pizza_3])
+    customer_1.pay_for_order(order_1)
+    restaurant.add_order(order_1)
+    restaurant.receive_payment(order_1, 2500, customer_1)
+    print(
+        "revenue and balance after first customer",
+        restaurant.revenue,
+        restaurant.balance,
+    )
+    customer_2 = Customer("Sakib Hasan", 6, "king@khan.com", "banani", 100000)
+    order_2 = Order(customer_2, [pizza_1, burger_2, coffee, burger_1, pizza_2])
+    customer_2.pay_for_order(order_2)
+    restaurant.add_order(order_2)
+    restaurant.receive_payment(order_2, 10000, customer_2)
+    print(
+        "revenue and balance after second customer",
+        restaurant.revenue,
+        restaurant.balance,
+    )
+
+    restaurant.pay_expense(restaurant.rent, "Rent")
+    print("after rent", restaurant.revenue, restaurant.balance, restaurant.expense)
+
+    restaurant.pay_salary(chef)
+    print("after salary", restaurant.revenue, restaurant.balance, restaurant.expense)
 
 
 if __name__ == "__main__":
